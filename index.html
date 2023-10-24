@@ -22,7 +22,7 @@
         <main class="app-main">
             
             <section class="photo-section">
-                <div class="left-arrow">
+                <div class="left-arrow" @click="getPrevPic()">
                     <i class="fa-solid fa-arrow-left"></i>
                 </div>
                 <div>
@@ -36,15 +36,15 @@
                         </figure>  
                     </div>
                 </div>
-                <div class="right-arrow">
+                <div class="right-arrow" @click="getNextPic()">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </section>
             <aside class="side-bar">
                 <div class="container thumbnail-box">
-                    <div class="t-box" v-for="(pic,index) in images.image">
+                    <div class="t-box" v-for="(pic,index) in images.image" :class="imageCounter === index ? 'box-shadow' : ''" @click="clickToChange(index)">
                         <img class="thumb-img" :src="pic" alt="">
-                        <div class="overlay"></div>
+                        <div class="overlay" :class="imageCounter === index ? 'd-none' : ''"></div>
                     </div>
                 </div>
             </aside>
