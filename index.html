@@ -28,10 +28,10 @@
                 <div>
                     <div class="img-box">
                         <figure class="figure-box">
-                            <img class="figure-img" src="" alt="">
+                            <img class="figure-img" :src="images.image[imageCounter]" alt="">
                             <div class="figure-text">
-                                <h3 class="figure-title"></h3>
-                                <p class="figure-par"></p>
+                                <h3 class="figure-title">{{ images.titles[imageCounter] }}</h3>
+                                <p class="figure-par">{{ images.texts[imageCounter] }}</p>
                             </div>
                         </figure>  
                     </div>
@@ -42,8 +42,8 @@
             </section>
             <aside class="side-bar">
                 <div class="container thumbnail-box">
-                    <div class="t-box">
-                        <img class="thumb-img" src="" alt="">
+                    <div class="t-box" v-for="(pic,index) in images.image">
+                        <img class="thumb-img" :src="pic" alt="">
                         <div class="overlay"></div>
                     </div>
                 </div>
