@@ -27,7 +27,7 @@
                 </div>
                 <div>
                     <div class="img-box">
-                        <figure class="figure-box" @mouseenter="autoPlay()">
+                        <figure class="figure-box" @mouseenter="stopAutoPlay()">
                             <img class="figure-img" :src="images.image[imageCounter]" alt="">
                             <div class="figure-text">
                                 <h3 class="figure-title">{{ images.titles[imageCounter] }}</h3>

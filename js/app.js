@@ -28,10 +28,10 @@ const { createApp } = Vue
             this.imageCounter = thumbindex;
         },
         autoPlay() {
-            setInterval(this.getNextPic,3000)
+            this.timer = setInterval(this.getNextPic,3000)
         },
         stopAutoPlay() {
-            clearInterval(this.getNextPic)
+            clearInterval(this.timer)
         }
     }
   }).mount('#app')
