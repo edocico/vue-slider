@@ -14,8 +14,8 @@
         <header>
             <h1>Scorri le immagini!</h1>
             <section class="button-section">
-                <button class="start-btn">Start</button>
-                <button class="stop-btn">Stop</button>
+                <button class="start-btn" @click="autoPlay()">Start</button>
+                <button class="stop-btn" @click="stopAutoPlay()">Stop</button>
                 <button class="invert-btn">Inverti</button>
             </section>
         </header>
@@ -27,7 +27,7 @@
                 </div>
                 <div>
                     <div class="img-box">
-                        <figure class="figure-box">
+                        <figure class="figure-box" @mouseenter="autoPlay()">
                             <img class="figure-img" :src="images.image[imageCounter]" alt="">
                             <div class="figure-text">
                                 <h3 class="figure-title">{{ images.titles[imageCounter] }}</h3>
